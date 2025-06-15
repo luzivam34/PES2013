@@ -1,0 +1,30 @@
+{% extends 'bases/base.html' %}
+
+
+{% block title %}Jogador{% endblock %}
+
+{% block content %}
+<h2>Jogadores</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Posição</th>
+        <th>Idade</th>
+        <th>Clube</th>
+        <th>Nação</th>
+    </tr>
+    {% for jogadores in jogador %}
+    <tr>
+        <td>{{ jogadores.id }}</td>
+        <td>{{ jogadores.nome }}</td>
+        <td>{{ jogadores.posicao }}</td>
+        <td>{{ jogadores.idade }}</td>
+        <td>{{ jogadores.clube }}</td>
+        <td>{{ jogadores.nation }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
